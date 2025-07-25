@@ -20,6 +20,7 @@ Technical Architect
 
 - [OpenStack Contributor Guide - Gerrit Setup](https://docs.openstack.org/contributors/es_MX/common/setup-gerrit.html)
 - [RENO Usage Guide](https://docs.openstack.org/reno/latest/user/usage.html)
+- [Developer Certificate of Origin (DCO)](https://docs.openstack.org/contributors/es_MX/common/dco.html#dco-setting-up-your-git-configuration)
 
 ## 🚀 Steps Followed:
 
@@ -81,25 +82,55 @@ git checkout glancebarbican-bz-2118763
   master
 ```
 
+```bash
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) vi releasenotes/notes/glance_barbican_integration-f493d11d6343e3c0.yaml  
+```
 
 ```bash
-➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) ✗ git status
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) ✗ git status
 On branch glancebarbican-bz-2118763
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   templates/glance-api.conf.j2
+	modified:   releasenotes/notes/glance_barbican_integration-f493d11d6343e3c0.yaml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) ✗ 
 ```
 
+```bash
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) ✗ git add .
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) ✗ 
 ```
-➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) git review         
+
+```bash
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) ✗ git status
+On branch glancebarbican-bz-2118763
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   releasenotes/notes/glance_barbican_integration-f493d11d6343e3c0.yaml
+
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) ✗ 
+```
+
+```bash
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) ✗ git commit --amend                                                     
+[glancebarbican-bz-2118763 6e30534] Enable Barbican Secrets Support for Glance in OpenStack Compute
+ Date: Fri Jul 25 17:23:52 2025 +0530
+ 3 files changed, 22 insertions(+)
+ create mode 100644 releasenotes/notes/glance_barbican_integration-f493d11d6343e3c0.yaml
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) 
+```
+
+
+
+```bash
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) git review                                                             
 remote: 
 remote: Processing changes: refs: 1, updated: 1        
 remote: Processing changes: refs: 1, updated: 1        
-remote: Processing changes: refs: 1, updated: 1        
 remote: Processing changes: refs: 1, updated: 1, done            
-remote: commit 5f2a7d7: warning: subject >50 characters; use shorter first paragraph        
-remote: commit 5f2a7d7: warning: too many message lines longer than 72 characters; manually wrap lines        
+remote: commit 6e30534: warning: subject >50 characters; use shorter first paragraph        
 remote: 
 remote: SUCCESS        
 remote: 
@@ -107,7 +138,8 @@ remote:   https://review.opendev.org/c/openstack/openstack-ansible-os_glance/+/9
 remote: 
 To ssh://review.opendev.org:29418/openstack/openstack-ansible-os_glance.git
  * [new reference]   HEAD -> refs/for/master%topic=glancebarbican-bz-2118763
-➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763)
+(myenv) ➜  openstack-ansible-os_glance git:(glancebarbican-bz-2118763) 
+
 ```
 
 <p align="center">
