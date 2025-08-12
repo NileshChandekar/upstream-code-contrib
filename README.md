@@ -44,6 +44,8 @@ Technical Architect
 </p>
 
 
+# Glance Contribution
+
 
 ```bash
 (myenv) ➜  gitprojects # git clone https://opendev.org/openstack/openstack-ansible-os_glance.git
@@ -150,7 +152,11 @@ To ssh://review.opendev.org:29418/openstack/openstack-ansible-os_glance.git
 ---
 
 
-#### Maskari Contribution
+# Maskari Contribution
+
+<p align="center">
+  <img src="Masakari" alt="Logo" style="display: block; margin: 0 auto;"/>
+</p>
 
 
 <p align="center">
